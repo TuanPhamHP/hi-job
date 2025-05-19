@@ -1,0 +1,15 @@
+{
+	"compilerOptions": {
+		"lib": ["es2021"],
+		"target": "es2021",
+		"module": "esnext", // 🔁 đổi từ "commonjs" thành "esnext"
+		"moduleResolution": "node",
+		"outDir": "./build",
+		"emitDecoratorMetadata": true,
+		"experimentalDecorators": true,
+		"sourceMap": true,
+		"esModuleInterop": true, // ✅ giúp import express chuẩn hơn
+		"strict": true
+	},
+	"include": ["src/**/*"]
+}
