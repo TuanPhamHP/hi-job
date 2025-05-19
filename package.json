@@ -2,7 +2,6 @@
 	"name": "typeorm-sample",
 	"version": "0.0.1",
 	"description": "Awesome project developed with TypeORM.",
-	"type": "module",
 	"devDependencies": {
 		"@types/express": "^5.0.2",
 		"@types/node": "^22.13.10",
