@@ -16,6 +16,8 @@
 	},
 	"scripts": {
 		"start": "ts-node src/index.ts",
-		"typeorm": "typeorm-ts-node-commonjs"
+		"typeorm": "typeorm-ts-node-commonjs",
+		"migration:revert": "ts-node ./node_modules/typeorm/cli.js migration:revert --dataSource src/data-source.ts",
+		"migration:run": "ts-node ./node_modules/typeorm/cli.js migration:run --dataSource src/data-source.ts"
 	}
 }
