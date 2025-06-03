@@ -1,27 +1,31 @@
-import { Entity, Column, PrimaryGeneratedColumn } from "typeorm";
+import { Entity, Column, PrimaryGeneratedColumn, ManyToOne } from 'typeorm';
+import { Category } from './Category';
 
 @Entity('jobs')
 export class Job {
-    @PrimaryGeneratedColumn()
-    id!: number;
+	@PrimaryGeneratedColumn()
+	id!: number;
 
-    @Column()
-    title!: string;
+	@Column()
+	title!: string;
 
-    @Column()
-    description!: string;
+	@Column()
+	description!: string;
 
-    @Column()
-    companyName!: string;
+	@Column()
+	companyName!: string;
 
-    @Column()
-    location!: string;
+	@Column()
+	location!: string;
 
-    @Column({ nullable: true })
-    salary!: number;
+	@Column({ nullable: true })
+	salary!: number;
 
-    @Column()
-    experienceLevel!: string;
+	@Column()
+	experienceLevel!: string;
+
+	@ManyToOne(() => Category, category => category.jobs)
+	category!: Category;
 }
 
 // Tạo Entity cho Category
